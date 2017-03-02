@@ -8,6 +8,7 @@ def asm_compile(input_file,output_file):
 	reader = open(input_file,"r")
 	instructions = reader.read().lower().replace('\n','').replace(' ','').split(";")
 	writer = open(output_file,"w")
+	writer.write("v2.0 raw")
 	for instruction in instructions:
 		try:
 			if not instruction == "":
